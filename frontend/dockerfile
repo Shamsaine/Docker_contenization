@@ -1,5 +1,8 @@
 # Stage 1: Build React app
-FROM node:14-alpine AS build
+FROM node:20-alpine AS build
+# Install git
+RUN apk add --no-cache git
+
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
