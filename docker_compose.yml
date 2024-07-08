@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   frontend:
-    build: ./frontend
+    image: your_dockerhub_username/frontend:latest
     container_name: frontend
     networks:
       - web
 
   backend:
-    build: ./backend
+    image: your_dockerhub_username/backend:latest
     container_name: backend
     networks:
       - web
